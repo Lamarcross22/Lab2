@@ -10,35 +10,38 @@ namespace Lab2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("This is Lab 2");
-            decimal length;
-            decimal width;
-        
-        Console.WriteLine("please enter your Length");
-           length= decimal.Parse(Console.ReadLine());
-        Console.WriteLine("please enter a Width");
-            width = decimal.Parse(Console.ReadLine());
+            bool lab = true;
+            while (lab)
+            {
 
 
-            decimal area = length * width;
-            decimal primeter = (2 * length) + (2 * width);
+                Console.WriteLine("This is Lab 2");
+                decimal length;
+                decimal width;
+
+                Console.WriteLine("please enter your Length");
+                length = decimal.Parse(Console.ReadLine());
+                Console.WriteLine("please enter a Width");
+                width = decimal.Parse(Console.ReadLine());
+
+
+                decimal area = length * width;
+                decimal primeter = (2 * length) + (2 * width);
+
+                Console.WriteLine($"Your Area is {area}");
+                Console.WriteLine($"Your primeter is {primeter}");
+
+                Console.WriteLine("Would you like to try again? Type Y or N.");
+                string userResponse = Console.ReadLine();
+                Console.WriteLine("Would you like to continue?");
+                String Choice = Console.ReadLine();
+                if (Choice == "n")
+                {
+                    lab = false;
+                }
+            }
+
            
-            Console.WriteLine($"Your Area is {area}");
-            Console.WriteLine($"Your primeter is {primeter}");
-
-            Console.WriteLine("Would you like to try again? Type Y or N.");
-            string userResponse = Console.ReadLine();
-
-            /*
-            if (userResponse == "Y" || userResponse == "y")
-            {
-                repeat = true;
-            }
-            else if (userResponse == "N" || userResponse == "n")
-            {
-                repeat = false;
-            }
-            */
         }
     }
 }
